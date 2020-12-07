@@ -33,4 +33,3 @@ jobs:
     - name: copy to server
       run: |
         scp -r ./public/* nginx@kevinheruer.nl:/opt/sites/kevinheruer
-        ssh nginx@kevinheruer.nl -t 'service nginx restart'
