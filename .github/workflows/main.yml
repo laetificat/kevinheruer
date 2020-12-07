@@ -32,5 +32,5 @@ jobs:
         args: --minify --buildDrafts
     - name: copy to server
       run: |
-        scp ./public/* nginx@kevinheruer.nl:/opt/sites/kevinheruer
+        scp -r ./public/* nginx@kevinheruer.nl:/opt/sites/kevinheruer
         ssh nginx@kevinheruer.nl -t 'service nginx restart'
