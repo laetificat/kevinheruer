@@ -24,18 +24,23 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         name: id_rsa # optional
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
+        
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Checkout submodules
+      uses: textbook/git-checkout-submodule-action@master
+      
     - name:  Install Hugo
       run: |
         curl -L https://github.com/gohugoio/hugo/releases/download/v0.79.0/hugo_0.79.0_Linux-64bit.tar.gz -o hugo.tar.gz
         tar xvzf hugo.tar.gz
         chmod +x ./hugo
-    - name: debug
-      run: |
-        pwd
-        ls
+        
     - name: Hugo build
       run: |
         ./hugo --minify
+        
     - name: copy to server
       run: |
         scp -r ./public/* nginx@kevinheruer.nl:/opt/sites/kevinheruer
