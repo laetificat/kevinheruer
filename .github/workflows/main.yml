@@ -26,8 +26,14 @@ jobs:
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
     - name: Checkout master
       uses: actions/checkout@master
+    - name:  Install Hugo
+      run: |
+        curl -L https://github.com/gohugoio/hugo/releases/download/v0.79.0/hugo_0.79.0_Linux-64bit.tar.gz -o hugo.tar.gz
+        tar xzjf hugo.tar.gz
+        chmod +x ./hugo
     - name: Hugo build
-      uses: kevvurs/action-hugo@v1.0-rc2
+      run: |
+        ./hugo --minify
     - name: copy to server
       run: |
         scp -r ./public/* nginx@kevinheruer.nl:/opt/sites/kevinheruer
