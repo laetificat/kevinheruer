@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  build_and_deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
@@ -24,13 +24,15 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         name: id_rsa # optional
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
-    - name: Checkout master
-      uses: actions/checkout@master
     - name:  Install Hugo
       run: |
         curl -L https://github.com/gohugoio/hugo/releases/download/v0.79.0/hugo_0.79.0_Linux-64bit.tar.gz -o hugo.tar.gz
         tar xvzf hugo.tar.gz
         chmod +x ./hugo
+    - name: debug
+      run: |
+        pwd
+        ls
     - name: Hugo build
       run: |
         ./hugo --minify
