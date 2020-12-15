@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Build and deploy website
 
 # Controls when the action will run. 
 on:
@@ -29,7 +29,7 @@ jobs:
     - name:  Install Hugo
       run: |
         curl -L https://github.com/gohugoio/hugo/releases/download/v0.79.0/hugo_0.79.0_Linux-64bit.tar.gz -o hugo.tar.gz
-        tar xzjf hugo.tar.gz
+        tar xvzf hugo.tar.gz
         chmod +x ./hugo
     - name: Hugo build
       run: |
