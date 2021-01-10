@@ -3,8 +3,8 @@ title = "Cyberpunk Bug"
 date = "2021-01-10T13:07:44+01:00"
 author = "Kevin"
 cover = ""
-tags = ["", ""]
-keywords = ["", ""]
+tags = ["Cyberpunk2077", "gamning", "bug"]
+keywords = ["cypberpunk", "2077", "cyberpunk2077", "gamning", "bug"]
 description = ""
 showFullContent = false
 +++
