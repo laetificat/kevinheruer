@@ -54,3 +54,5 @@ resizepart 3 100%
 This will resize partition (sda)3 to use 100% of the newly added space.
 
 That's it, no need to reboot!
+
+You can find a more detailed description at the source: https://pve.proxmox.com/wiki/Resize_disks
