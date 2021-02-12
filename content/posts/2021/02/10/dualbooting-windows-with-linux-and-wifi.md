@@ -10,9 +10,9 @@ showFullContent = false
 +++
 
 Today I ran into a problem that seems to have annoyed a lot of people, so I'm just 
-posting it here to spread the word (and maybe future me).
+posting it here to spread the word (and maybe for future me to reference back to).
 
-The problem is that when you dual boot Windows and Linux, the change exists that Windows 
+The problem is that when you dual boot Windows and Linux, the chance exists that Windows 
 used Fast Boot. Fast Boot causes the system to keep things like WiFi cards to itself so 
 Linux can't access it and just says it can't find it.
 
