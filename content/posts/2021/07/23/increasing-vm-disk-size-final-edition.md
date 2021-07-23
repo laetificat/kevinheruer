@@ -1,6 +1,6 @@
 +++
 title = "Increasing VM disk size: Final edition"
-date = "2021-07-23T22:47:00+01:00"
+date = "2021-07-23T21:47:00+01:00"
 author = "Kevin"
 cover = ""
 tags = ["vm", "storage", "server", "infrastructure", "proxmox"]
