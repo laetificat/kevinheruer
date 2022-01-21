@@ -4,7 +4,7 @@ date = "2022-01-21T21:00:00+01:00"
 author = "Kevin"
 cover = ""
 tags = ["monitoring", "zabbix", "proxmox", "vm"]
-keywords = "monitoring", "zabbix", "proxmox", "vm"]
+keywords = ["monitoring", "zabbix", "proxmox", "vm"]
 description = "I was shocked to find out what really happens behind the scenes"
 showFullContent = false
 +++
