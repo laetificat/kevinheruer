@@ -4,7 +4,7 @@ date = "2022-09-13T19:30:00+01:00"
 author = "Kevin"
 cover = ""
 tags = ["proxmox", "ve", "truenas", "infrastructure", "migration", "migrate", "hosting"]
-keywords = ["proxmox", "ve" "truenas", "infrastructure", "migration", "migrate", "hosting"]
+keywords = ["proxmox", "ve", "truenas", "infrastructure", "migration", "migrate", "hosting"]
 description = "Why I chose to migrate from Proxmox to TrueNAS Scale"
 showFullContent = false
 +++
