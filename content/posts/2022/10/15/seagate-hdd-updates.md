@@ -1,6 +1,6 @@
 +++
 title = "Seagate Skyhawk Drives suck! Part 2"
-date = "2022-15-08T01:00:00+01:00"
+date = "2022-10-15T01:00:00+01:00"
 author = "Kevin"
 cover = ""
 tags = ["hdd", "seagate", "skyhawk", "harddrive", "drive", "server", "storage"]

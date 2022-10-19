@@ -1,6 +1,9 @@
 # Hugo default output directory
 /public
 
+# Hugo lock file
+.hugo_build.lock
+
 ## OS Files
 # Windows
 Thumbs.db
