@@ -44,3 +44,11 @@ jobs:
     - name: copy to server
       run: |
         rsync -avz --delete ./public/ nginx@ssh.kevinheruer.nl:/opt/sites/kevinheruer/
+  purge_cache:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Purge cache
+      uses: jakejarvis/cloudflare-purge-action@master
+      env:
+        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+        CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
