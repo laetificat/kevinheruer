@@ -43,4 +43,4 @@ jobs:
         
     - name: copy to server
       run: |
-        rsync -avz --delete ./public/ nginx@ssh.kevinheruer.nl:/opt/sites/kevinheruer/
+        scp -r ./public/* nginx@ssh.kevinheruer.nl:/opt/sites/kevinheruer
