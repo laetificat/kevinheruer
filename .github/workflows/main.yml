@@ -33,7 +33,7 @@ jobs:
       
     - name:  Install Hugo
       run: |
-        curl -L https://github.com/gohugoio/hugo/releases/download/v0.115.4/hugo_0.115.4_Linux-64bit.tar.gz -o hugo.tar.gz
+        curl -L https://github.com/gohugoio/hugo/releases/download/v0.115.4/hugo_extended_0.115.4_Linux-64bit.tar.gz -o hugo.tar.gz
         tar xvzf hugo.tar.gz
         chmod +x ./hugo
         
