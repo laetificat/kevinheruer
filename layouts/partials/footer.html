@@ -1,27 +1,21 @@
 <footer class="footer">
-    <div class="footer__inner">
-      {{ if $.Site.Copyright }}
-        <div class="copyright copyright--user">
-          <span>{{ $.Site.Copyright | safeHTML }}</span>
-      {{ else }}
-        <div class="copyright">
-          <span>© {{ now.Year }} Powered by <a href="http://gohugo.io">Hugo</a></span>
-      {{ end }}
-        </div>
-    </div>
-  </footer>
-  
-  {{ $menuJs := resources.Get "js/menu.js" | js.Build "menu.js" | minify | fingerprint }}
-  {{ $prismJs := resources.Get "js/prism.js" | js.Build "prism.js" | minify | fingerprint }}
+  <div class="footer__inner">
+    {{ if $.Site.Copyright }}
+      <div class="copyright copyright--user">
+        <span>{{ $.Site.Copyright | safeHTML }}</span>
+    {{ else }}
+      <div class="copyright">
+        <span>© {{ now.Year }} Powered by <a href="http://gohugo.io">Hugo</a></span>
+    {{ end }}
+  </div>
+</footer>
 
-  <script src="{{ $menuJs.Permalink }}"></script>
-  <script src="{{ $prismJs.Permalink }}"></script>
-  
-  {{ if $.Site.Params.showLanguageSelector }}
-    {{ $languageSelector := resources.Get "js/languageSelector.js" | js.Build "languageSelector.js" | minify | fingerprint }}
-    <script src="{{ $languageSelector.Permalink }}"></script>
-  {{ end }}
-  
-  <!-- Extended footer section-->
-  {{ partial "extended_footer.html" . }}
-  
+{{ $menu := resources.Get "js/menu.js" | js.Build }}
+{{ $prism := resources.Get "js/prism.js" | js.Build }}
+
+{{ $bundle := slice $menu $prism | resources.Concat "bundle.js" | resources.Minify }}
+
+<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
+
+<!-- Extended footer section-->
+{{ partial "extended_footer.html" . }}
