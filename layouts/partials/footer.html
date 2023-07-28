@@ -11,11 +11,15 @@
     </div>
   </footer>
   
-  <script src="{{ "assets/main.js" | absURL }}"></script>
-  <script src="{{ "assets/prism.js" | absURL }}"></script>
+  {{ $menuJs := resources.Get "js/menu.js" | js.Build "menu.js" | minify | fingerprint }}
+  {{ $prismJs := resources.Get "js/prism.js" | js.Build "prism.js" | minify | fingerprint }}
+
+  <script src="{{ $menuJs.Permalink }}"></script>
+  <script src="{{ $prismJs.Permalink }}"></script>
   
   {{ if $.Site.Params.showLanguageSelector }}
-    <script src="{{ "assets/languageSelector.js" | absURL }}"></script>
+    {{ $languageSelector := resources.Get "js/languageSelector.js" | js.Build "languageSelector.js" | minify | fingerprint }}
+    <script src="{{ $languageSelector.Permalink }}"></script>
   {{ end }}
   
   <!-- Extended footer section-->
