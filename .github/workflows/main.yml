@@ -43,7 +43,7 @@ jobs:
         
     - name: copy to server
       run: |
-        rsync -avz --delete ./public/ nginx@ssh.kevinheruer.nl:/opt/sites/kevinheruer/
+        rsync -avz --delete ./public/ deploy@37.27.5.76:/var/www/kevinheruer.nl/public/
   purge_cache:
     needs: build_and_deploy
     runs-on: ubuntu-latest
