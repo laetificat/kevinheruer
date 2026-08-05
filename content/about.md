@@ -24,4 +24,3 @@ By day I manage a pile of projects, mostly web infrastructure and internal syste
 ## Find me
 
 - **GitHub:** [laetificat](https://github.com/laetificat)
-- **Email:** [kevin@kevinheruer.nl](mailto:kevin@kevinheruer.nl)
